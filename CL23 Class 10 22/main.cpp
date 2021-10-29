@@ -85,12 +85,10 @@ int main() {
 
 	UltraHuman hajime;
 
-	hajime.Register(&cat);
-
+	hajime.SetPet(&cat);
 	hajime.PetAction();
 
-	hajime.Register(&dog);
-
+	hajime.SetPet(&dog);
 	hajime.PetAction();
 
 	return 0;
