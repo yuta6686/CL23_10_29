@@ -139,19 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Human.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="NeoHuman.cpp" />
-    <ClCompile Include="UltraHuman.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CatHuman.h" />
+    <ClInclude Include="Bear.h" />
     <ClInclude Include="Catt.h" />
     <ClInclude Include="Dog.h" />
     <ClInclude Include="Human.h" />
-    <ClInclude Include="HumanCatPerformance.h" />
-    <ClInclude Include="NeoHuman.h" />
     <ClInclude Include="Pet.h" />
-    <ClInclude Include="UltraHuman.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

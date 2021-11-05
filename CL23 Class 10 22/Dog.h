@@ -1,17 +1,18 @@
 #pragma once
-#include "/bisstdc++.h/bits/stdc++.h"
+#include <string>
+#include <iostream>
 #include "Pet.h"
 class Dog:public Pet
 {
 public:
-	Dog() :m_name("イッヌ"){}
-	Dog(const std::string& name) :m_name(name) {}
+	//コンストラクタ
+	Dog() :Dog("イッヌ"){}
+	Dog(const std::string& name) :Pet(name) {}
 
+	//アクション
 	void Action(void)override {
-		std::cout << m_name << "は「わぉん」と泣いた。\n";
+		std::cout << GetName() << "は「わぉん」と泣いた。\n";
 	}
 
-private:
-	std::string m_name;
 };
 

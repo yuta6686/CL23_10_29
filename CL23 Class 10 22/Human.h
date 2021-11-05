@@ -1,21 +1,24 @@
 #pragma once
-#include "/bisstdc++.h/bits/stdc++.h"
-#include "Catt.h"
-
-
-class Human
+#include <vector>
+#include "Pet.h"
+class Human 
 {
-	std::string m_name;
-
-	Catt m_cat;
-
+private:
+	Pet* m_pPet;
+	std::vector<Pet*> m_pPets;	//ペット（複数用）
 public:
-	Human():m_name("Perfect Human") {}
-	Human(const std::string& name):m_name(name) {}
+	
+	Human();
+	Human(Pet* p);
 
-	void OrderCat() { 
-		m_cat.Action(); 
-		std::cout << "という命令を" << m_name << "が行った" << std::endl; 
-	}
+	//ペット（単体）
+	void SetPet(Pet* p) { m_pPet = p; }
+	void PetAction(void);
+
+	//ペット（複数）
+	void SetPets(Pet* p) { m_pPets.push_back(p); }
+	void ReleasePets(void) { m_pPets.pop_back(); }
+	void PetsAction(void);
 };
+
 
